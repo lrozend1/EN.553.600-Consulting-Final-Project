@@ -2,7 +2,7 @@
 figure;
 ax = usamap('Louisiana');
 states = readgeotable("BNDY_DOTD_ParishBoundaries.shp");
-geoshow(ax, states, 'DisplayType', 'polygon', 'FaceColor', [1 1 1])
+geoshow(ax, states, 'DisplayType', 'polygon', 'FaceColor', [1 1 0.5])
 
 % Define seed points in geographic coordinates (latitude, longitude)
 seeds = [
