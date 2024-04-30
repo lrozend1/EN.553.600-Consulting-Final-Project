@@ -6,13 +6,15 @@ geoshow(ax, states, 'DisplayType', 'polygon', 'FaceColor', [1 1 1])
 
 % Define seed points in geographic coordinates (latitude, longitude)
 seeds = [
-    30.9843, -91.9623;  % Baton Rouge
-    29.9511, -90.0715;  % New Orleans
-    32.5252, -93.7502;  % Shreveport
-    30.2241, -92.0198;  % Lafayette
-    30.2131, -93.2044;  % Lake Charles
-    32.5093, -92.1193;  % Monroe
+    32.5806,	-93.8823; %Caddo
+    30.2293,	-93.3581; %Calcasieu
+    31.1986,	-92.5332; %Rapides
+    30.5383,	-91.0956; %East Baton Rouge
+    29.7882,	-90.1276; %Jefferson
+    30.0687,	-89.9289; %Orleans
 ];
+
+
 
 % Convert geographic coordinates to map coordinates
 [x, y] = mfwdtran(seeds(:,1), seeds(:,2));
