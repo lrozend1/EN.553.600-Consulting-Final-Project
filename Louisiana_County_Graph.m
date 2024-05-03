@@ -10,7 +10,7 @@ parishNames = {'Acadia', 'Allen', 'Ascension', 'Assumption', 'Avoyelles', 'Beaur
                'West Carroll', 'West Feliciana', 'Winn'};
 
 % Load the adjacency matrix from the CSV file, assuming the rows and columns are ordered as per parishNames
-adjMatrix = readmatrix('Pairwise County Adjacency Distances.csv');
+adjMatrix = readmatrix('Pairwise County Adjacency.csv');
 adjMatrix = adjMatrix(:, 2:65);
 
 % Create a graph from the adjacency matrix
@@ -18,5 +18,5 @@ G = graph(adjMatrix, parishNames);
 
 % Plot the graph with labels
 figure;
-plot(G, 'NodeLabel', parishNames, 'EdgeLabel', G.Edges.Weight);
+plot(G, 'NodeLabel', parishNames);
 title('Graph Representation of Louisiana Parishes');
